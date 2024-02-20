@@ -125,11 +125,13 @@ public class DrawInstancedDisc : GraphicsDrawBaseMono
 
         // ...
 
+        public int index;
+
         public float4 color;
 
         // ...
 
-        public static int Size() => sizeof( float ) * 4 ;
+        public static int Size() => sizeof( float ) * 5 ;
     }
 
     protected ComputeBuffer _dataBuffer;
@@ -155,7 +157,11 @@ public class DrawInstancedDisc : GraphicsDrawBaseMono
         {
             float t = ( float ) i / _data.Length;
 
-            _data[ i ] = new InstanceData { color = (Vector4) Color.Lerp( Color.red, Color.green, t ) };
+            _data[ i ] = new InstanceData 
+            { 
+                index = i,    
+                color = (Vector4) Color.Lerp( Color.red, Color.green, t ) 
+            };
         }
 
         _dataBuffer.SetData( _data );

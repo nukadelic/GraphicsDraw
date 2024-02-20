@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3109683095572090434
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6812885075341556107}
+  - component: {fileID: 3349318159919369741}
+  m_Layer: 0
+  m_Name: Draw Instaced Disc Prefab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6812885075341556107
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3109683095572090434}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 72.46762, y: 72.46762, z: 72.46762}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3349318159919369741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3109683095572090434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f40e47e646666f1418f212b16b6828e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alwaysUpdate: 0
+  count: 3793
+  debugParams:
+    showLogs: 0
+    execTime: 0.12207031
+    benchmark: 1.221 ms
+  drawParams:
+    mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+    material: {fileID: 2100000, guid: e3cf2216437befc4482192c8af2334d5, type: 2}
+    meshRadius: 1
+    drawMode: 0
+    submeshIndex: 0
+    castShadows: 0
+    receiveShadows: 0
+    layer: 0
+    occlusionCulling: 0
+    camera: {fileID: 0}
+    lightProbeUsage: 0
+    lightProbeProxyVolume: {fileID: 0}
+    renderingLayerMask: 1
+    rendererPriority: 0
+    reflectionProbeUsage: 0
+    motionVectorMode: 2
+    meshTriangleCount: 12
+  properties:
+    randomizeColor: 0
+    radius: 2958
+    thickness: 1518
+    scale: 1
+    scaleRatio: 0
+    distributionRadius: 3.01
+    distributionThickness: 6.13
+    ratio: 0.162
+    seed: 810
+  preview_drawCount: 7478
+  preview_matrixLen: 10240
+  preview_matrixCulledLen: 10240
+  preview_pos_last:
+    x: 0
+    y: 0
+    z: 0

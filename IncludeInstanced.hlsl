@@ -3,6 +3,11 @@
 #ifndef GRASS_INSTANCED_INCLUDED
 #define GRASS_INSTANCED_INCLUDED
 
+float2 random2(float2 st)
+{
+	return frac(sin(dot(st.xy, float2(12.9898, 78.233))) * 43758.5453);
+}
+
 // ----------------------------------------------------------------------------------
 
 // Graph should contain Boolean Keyword, "PROCEDURAL_INSTANCING_ON", Global, Multi-Compile.
@@ -26,9 +31,26 @@ void dummy(){
 
 // ----------------------------------------------------------------------------------
 
-struct InstanceData { float4 color; };
+struct InstanceData { int index; float4 color; };
 
 StructuredBuffer<InstanceData> _PerInstanceData;
+
+void GetInstancedIndex_float(out int Out)
+{
+	Out = 1;
+#ifndef SHADERGRAPH_PREVIEW
+#if UNITY_ANY_INSTANCING_ENABLED
+	Out = _PerInstanceData[unity_InstanceID].index;
+#endif
+#endif
+}
+
+void GetInstancedIndexRandom_float(out float Out)
+{
+	int idx;
+	GetInstancedIndex_float( idx );
+	Out = random2( float2( idx , 0 ) );
+}
 
 void GetInstancedColor_float(out float4 Out) 
 {
