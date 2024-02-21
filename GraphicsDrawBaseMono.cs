@@ -99,6 +99,8 @@ public class GraphicsDrawBaseMono : MonoBehaviour
 	{
 		if ( ! ParamsAreValid() ) return;
 
+		DataPreInit();
+
 		var t = Time.realtimeSinceStartup;
 
 		int resized = ( 1 + count / bufferExtendValue ) * bufferExtendValue;  
@@ -156,6 +158,8 @@ public class GraphicsDrawBaseMono : MonoBehaviour
 
 		debugParams.benchmark = ( ( Time.realtimeSinceStartup - t ) * 1000f ).ToString("N3") + " ms";
 	}
+	protected virtual void DataPreInit() { }
+
 	protected virtual void DataInit(int size) { }
 	protected virtual void DataUpdate() { }
 	protected virtual void DataDispose() { }
